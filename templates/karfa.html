@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>KARFA</h1>
+    <h1><a href="/">Home</a></h1>
+    {% for x in vkarfa %}
+        <div>
+           <a href="/eydavoru/{{ x }}"><h2>{{ vorur[x][1] }}</h2></a>
+            <h2>{{ vorur[x][2] }}</h2>
+        </div>
+    {% endfor %}
+    <h1>Samtals: {{ summa }}</h1>
+    <h1><a href="/eyda">Eyða körfu</a></h1>
+    <form action="/Takk" method="post">
+        <div>
+          <label for="name">Nafn:</label>
+          <input type="text" id="name" name="user_name" required>
+        </div>
+        <div>
+          <label for="mail">E-mail:</label>
+          <input type="email" id="mail" name="user_mail" required>
+        </div>
+        <div>
+          <label for="phonenumber">Símanúmer</label>
+          <input type="tel" maxlength="7" id="phonenumber" name="phone_number" required>
+        </div>
+        <div class="button">
+            <button type="submit">Kaupa</button>
+          </div>
+      </form>
+</body>
+</html>
